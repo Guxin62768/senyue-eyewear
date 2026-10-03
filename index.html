@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>森玥眼镜 · 专业验光配镜</title>
+<style>
+:root{
+  --ink:#22303c; --muted:#6b7c8a; --line:#e8edf1; --bg:#f7f9fb; --card:#fff;
+  --teal:#0f766e; --teal-d:#0b5c55; --teal-l:#e6f4f2; --accent:#e8a33d;
+  --shadow:0 8px 28px rgba(20,50,70,.08); --shadow-lg:0 16px 44px rgba(20,50,70,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'PingFang SC','Microsoft YaHei','Noto Sans SC',system-ui,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+img{display:block;max-width:100%}
+
+/* 顶栏 */
+.topbar{background:var(--teal-d);color:#cfe8e4;font-size:.84rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:center}
+.topbar a{color:#ffe1a6;text-decoration:none;font-weight:600}
+
+/* 导航 */
+header.nav{background:rgba(255,255,255,.97);backdrop-filter:blur(8px);position:sticky;top:0;z-index:50;
+  border-bottom:1px solid var(--line);box-shadow:0 1px 14px rgba(20,50,70,.05)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.28rem;color:var(--teal-d);letter-spacing:2px}
+.logo .mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--teal-d));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:1.3rem;box-shadow:0 6px 16px rgba(15,118,110,.3)}
+.logo small{display:block;font-size:.6rem;font-weight:500;color:var(--muted);letter-spacing:3px}
+nav.menu{display:flex;gap:4px}
+nav.menu a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;padding:9px 16px;border-radius:8px;transition:.2s}
+nav.menu a:hover{background:var(--teal-l);color:var(--teal-d)}
+
+/* Hero */
+.hero{position:relative;color:#fff;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(110deg,rgba(11,60,55,.9) 0%,rgba(11,60,55,.68) 48%,rgba(11,60,55,.3) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:92px 22px 100px}
+.hero .eyebrow{display:inline-block;background:rgba(232,163,61,.18);border:1px solid rgba(232,163,61,.55);
+  color:#ffe1a6;font-size:.8rem;letter-spacing:3px;padding:6px 16px;border-radius:99px;margin-bottom:22px;font-weight:600}
+.hero h1{font-size:clamp(1.8rem,4.2vw,2.8rem);line-height:1.35;font-weight:800;letter-spacing:1px;max-width:740px;margin-bottom:18px}
+.hero .sub{font-size:clamp(.95rem,1.6vw,1.12rem);color:#d6ece8;max-width:600px;margin-bottom:32px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.98rem;
+  padding:14px 30px;border-radius:10px;transition:.25s}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#d88f28);color:#3a2600;box-shadow:0 8px 24px rgba(232,163,61,.4)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(232,163,61,.55)}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+
+/* 特色条 */
+.stats{background:var(--teal);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;padding:0}
+.stat{padding:28px 18px;text-align:center;position:relative}
+.stat+.stat::before{content:"";position:absolute;left:0;top:24%;height:52%;width:1px;background:rgba(255,255,255,.18)}
+.stat b{display:block;font-size:clamp(1.3rem,2.6vw,1.9rem);color:#ffe1a6;font-weight:800}
+.stat span{font-size:.84rem;color:#d3e9e5;letter-spacing:1px}
+
+/* 区块 */
+section{padding:82px 0}
+.sec-head{text-align:center;margin-bottom:48px}
+.sec-head .tag{color:var(--teal);font-size:.82rem;letter-spacing:4px;font-weight:700;margin-bottom:10px}
+.sec-head h2{color:var(--teal-d);font-size:clamp(1.5rem,3vw,2rem);font-weight:800;letter-spacing:1px}
+.sec-head .sub{color:var(--muted);font-size:.95rem;margin-top:12px;max-width:640px;margin-left:auto;margin-right:auto}
+
+/* 产品卡片 */
+.grid{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  box-shadow:var(--shadow);transition:.28s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:#d6e2e6}
+.card .thumb{overflow:hidden;aspect-ratio:4/3;background:#eef3f4}
+.card .thumb img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .thumb img{transform:scale(1.06)}
+.card .body{padding:22px 22px 26px;flex:1;display:flex;flex-direction:column}
+.card h3{color:var(--teal-d);font-size:1.08rem;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:9px}
+.card h3::before{content:"";width:4px;height:18px;border-radius:2px;background:linear-gradient(var(--accent),#d88f28);flex:none}
+.card p{color:var(--muted);font-size:.92rem;line-height:1.8}
+
+/* 服务 */
+.services{background:var(--teal-l)}
+.srv-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.srv{background:#fff;border-radius:16px;padding:32px 26px;box-shadow:var(--shadow);transition:.28s;text-align:center}
+.srv:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.srv .ic{width:60px;height:60px;margin:0 auto 16px;border-radius:16px;
+  background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;font-size:1.5rem;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(15,118,110,.28)}
+.srv h3{color:var(--teal-d);font-size:1.05rem;margin-bottom:10px}
+.srv p{color:var(--muted);font-size:.9rem}
+
+/* 关于 */
+.about .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:52px;align-items:center}
+.about h2{font-size:clamp(1.5rem,3vw,1.9rem);font-weight:800;color:var(--teal-d);margin-bottom:20px}
+.about p{color:#46596a;font-size:.98rem;margin-bottom:14px}
+.about .pic{border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.about .pic img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+
+/* 联系 */
+.contact{background:#fff}
+.ct-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.ct{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:34px 28px;text-align:center;box-shadow:var(--shadow)}
+.ct .ic{width:58px;height:58px;margin:0 auto 16px;border-radius:50%;
+  background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.ct h3{color:var(--teal-d);font-size:1rem;margin-bottom:10px}
+.ct p{color:var(--muted);font-size:.93rem;line-height:1.95}
+.ct a{color:var(--teal-d);font-weight:700;text-decoration:none;font-size:1.05rem}
+.ct a:hover{color:var(--accent)}
+
+/* CTA */
+.cta{background:linear-gradient(120deg,var(--teal),var(--teal-d));color:#fff;text-align:center}
+.cta .wrap{padding:62px 22px}
+.cta h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;margin-bottom:14px}
+.cta p{color:#d3e9e5;margin-bottom:30px}
+
+/* footer */
+footer{background:#0a2b28;color:#9fc4bf;text-align:center;padding:34px 20px;font-size:.85rem}
+footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;letter-spacing:2px}
+
+@media(max-width:760px){
+  .about .wrap{grid-template-columns:1fr;gap:30px}
+  .about .pic{order:-1}
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3)::before{display:none}
+  section{padding:56px 0}
+  .hero .wrap{padding:60px 22px 68px}
+  nav.menu{display:none}
+}
+.nav-btn{display:inline-block;margin-top:12px;background:var(--teal-l);color:var(--teal-d);font-weight:700;
+  font-size:.9rem;padding:9px 18px;border-radius:9px;text-decoration:none;transition:.25s;border:1px solid rgba(15,118,110,.25)}
+.nav-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
+</style></head><body>
+
+<!-- 顶栏 -->
+<div class="topbar"><div class="wrap">
+  <span>森玥眼镜 · 专业验光 · 品牌定制</span>
+  <span>电话：<a href="tel:13382466868">133 8246 6868（顾紫玄）</a></span>
+</div></div>
+
+<!-- 导航 -->
+<header class="nav"><div class="wrap">
+  <div class="logo"><div class="mark">森</div><div>森玥眼镜<small>SENYUE OPTICAL</small></div></div>
+  <nav class="menu">
+    <a href="#prod">产品中心</a><a href="#srv">服务项目</a><a href="#about">关于我们</a><a href="#contact">联系我们</a>
+  </nav>
+</div></header>
+
+<!-- Hero -->
+<section class="hero" style="padding:0">
+  <img src="images/store.jpg" alt="森玥眼镜门店"/>
+  <div class="wrap">
+    <span class="eyebrow">专业验光 · 品牌定制</span>
+    <h1>森玥眼镜<br>用心呵护您的每一双眼睛</h1>
+    <p class="sub">专业验光师一对一精准验光，精选品牌镜架镜片，支持个性化品牌定制——为您配一副舒适、清晰、称心的眼镜。</p>
+    <div class="btns">
+      <a href="#prod" class="btn btn-primary">浏览产品 →</a>
+      <a href="https://uri.amap.com/search?keyword=江苏省泰州市靖江市公所桥16号" target="_blank" rel="noopener" class="btn btn-ghost">🧭 导航到店</a>
+    </div>
+  </div>
+</section>
+
+<!-- 特色条 -->
+<div class="stats"><div class="wrap">
+  <div class="stat"><b>专业验光</b><span>一对一精准验光</span></div>
+  <div class="stat"><b>品牌定制</b><span>个性定制 专属配镜</span></div>
+  <div class="stat"><b>品牌镜片</b><span>正品保障 清晰舒适</span></div>
+  <div class="stat"><b>贴心售后</b><span>免费清洗调校</span></div>
+</div></div>
+
+<!-- 产品中心 -->
+<section id="prod"><div class="wrap">
+  <div class="sec-head">
+    <div class="tag">产品中心</div>
+    <h2>精选眼镜产品</h2>
+    <p class="sub">品牌镜架 · 专业镜片 · 太阳镜 · 隐形眼镜，支持个性定制</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="thumb"><img src="images/frames.jpg" alt="光学镜架"/></div>
+      <div class="body"><h3>光学镜架</h3><p>金属 / 板材 / 钛架等多种材质与款式，舒适佩戴，时尚百搭。</p></div></div>
+    <div class="card"><div class="thumb"><img src="images/sunglasses.jpg" alt="太阳镜"/></div>
+      <div class="body"><h3>太阳镜</h3><p>防紫外线偏光太阳镜，潮流款式，遮阳护眼两不误。</p></div></div>
+    <div class="card"><div class="thumb"><img src="images/lenses.jpg" alt="镜片"/></div>
+      <div class="body"><h3>镜片系列</h3><p>单光 / 防蓝光 / 渐进多焦点镜片，轻薄清晰，护眼舒适。</p></div></div>
+    <div class="card"><div class="thumb"><img src="images/contact.jpg" alt="隐形眼镜"/></div>
+      <div class="body"><h3>隐形眼镜</h3><p>日抛 / 月抛 / 美瞳，正品保障，佩戴水润舒适。</p></div></div>
+  </div>
+</div></section>
+
+<!-- 服务项目 -->
+<section id="srv" class="services"><div class="wrap">
+  <div class="sec-head">
+    <div class="tag">服务项目</div>
+    <h2>专业贴心服务</h2>
+  </div>
+  <div class="srv-grid">
+    <div class="srv"><div class="ic">◎</div><h3>专业验光</h3><p>专业验光师一对一服务，精准测量度数，配镜更放心。</p></div>
+    <div class="srv"><div class="ic">◈</div><h3>品牌定制</h3><p>依度数、用眼习惯与脸型，专属定制镜架镜片方案。</p></div>
+    <div class="srv"><div class="ic">✦</div><h3>眼镜维修</h3><p>镜架调整、螺丝更换、鼻托更换等维修服务。</p></div>
+    <div class="srv"><div class="ic">✧</div><h3>免费护理</h3><p>超声波清洗、镜架调校，让眼镜时刻保持最佳状态。</p></div>
+  </div>
+</div></section>
+
+<!-- 关于我们 -->
+<section id="about" class="about"><div class="wrap">
+  <div>
+    <h2>关于森玥眼镜</h2>
+    <p>森玥眼镜位于江苏省泰州市靖江市公所桥 16 号（公所桥往西 100 米），致力为周边顾客提供专业、贴心、实惠的眼镜服务。</p>
+    <p>我们拥有专业验光设备与经验丰富的验光师，为您提供一对一精准验光；并支持品牌镜架镜片个性化定制，依据度数、用眼习惯与脸型，打造专属方案。</p>
+    <p>无论是日常近视镜、防蓝光镜片，还是太阳镜、隐形眼镜，森玥眼镜都能为您提供合适的方案。</p>
+  </div>
+  <div class="pic"><img src="images/exam.jpg" alt="专业验光服务"/></div>
+</div></section>
+
+<!-- 联系我们 -->
+<section id="contact" class="contact"><div class="wrap">
+  <div class="sec-head">
+    <div class="tag">联系我们</div>
+    <h2>欢迎光临森玥眼镜</h2>
+  </div>
+  <div class="ct-grid">
+    <div class="ct"><div class="ic">☎</div><h3>联系电话</h3><p><a href="tel:13382466868">133 8246 6868</a><br>顾紫玄</p></div>
+    <div class="ct"><div class="ic">📍</div><h3>门店地址</h3><p>江苏省泰州市靖江市<br>公所桥 16 号（公所桥往西 100 米）</p>
+      <a class="nav-btn" href="https://uri.amap.com/search?keyword=江苏省泰州市靖江市公所桥16号" target="_blank" rel="noopener">🧭 高德导航到店</a></div>
+    <div class="ct"><div class="ic">🕐</div><h3>营业时间</h3><p>上午 9:00 - 晚上 21:00<br>（具体以门店为准）</p></div>
+  </div>
+</div></section>
+
+<!-- CTA -->
+<section class="cta"><div class="wrap">
+  <h2>想配一副合适的眼镜？</h2>
+  <p>欢迎到店验光咨询，或直接来电，我们为您提供专业建议</p>
+  <a href="tel:13382466868" class="btn btn-primary">立即致电 133 8246 6868</a>
+</div></section>
+
+<footer>
+  <div class="brand">森玥眼镜</div>
+  <div>地址：江苏省泰州市靖江市公所桥 16 号（往西 100 米）　·　电话：133 8246 6868（顾紫玄）</div>
+  <div style="margin-top:10px;color:#6d9a94">© 森玥眼镜 · 展示用页面</div>
+</footer>
+
+</body></html>
