@@ -129,6 +129,27 @@ footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;let
 .nav-btn{display:inline-block;margin-top:12px;background:var(--teal-l);color:var(--teal-d);font-weight:700;
   font-size:.9rem;padding:9px 18px;border-radius:9px;text-decoration:none;transition:.25s;border:1px solid rgba(15,118,110,.25)}
 .nav-btn:hover{background:var(--teal);color:#fff;transform:translateY(-2px)}
+
+/* 预约验光 */
+.booking{background:linear-gradient(120deg,#0f766e,#0b5c55);color:#fff;padding:70px 0}
+.booking-card{display:grid;grid-template-columns:1.15fr 1fr;gap:44px;align-items:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:44px}
+.bk-left .tag{color:#ffe1a6;font-size:.82rem;letter-spacing:4px;font-weight:700;margin-bottom:12px}
+.bk-left h2{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;margin-bottom:14px}
+.bk-left p{color:#cfe8e4;font-size:.98rem;margin-bottom:20px;max-width:460px}
+.bk-badges{display:flex;gap:10px;flex-wrap:wrap}
+.bk-badges span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+  padding:6px 16px;border-radius:99px;font-size:.85rem;font-weight:600}
+.bk-right{background:rgba(255,255,255,.1);border-radius:16px;padding:30px;text-align:center;border:1px solid rgba(255,255,255,.2)}
+.bk-label{font-size:.85rem;color:#cfe8e4;letter-spacing:2px;margin-bottom:10px}
+.bk-phone{display:block;font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;color:#ffe1a6;text-decoration:none;letter-spacing:1px;margin-bottom:6px}
+.bk-phone:hover{color:#fff}
+.bk-person{font-size:.9rem;color:#cfe8e4;margin-bottom:20px}
+.bk-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.btn-ghost-dark{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.4);padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:.92rem}
+.btn-ghost-dark:hover{background:rgba(255,255,255,.22)}
+.bk-note{font-size:.82rem;color:#b8d8d4}
+@media(max-width:760px){.booking-card{grid-template-columns:1fr;gap:28px;padding:28px}}
 </style></head><body>
 
 <!-- 顶栏 -->
@@ -141,7 +162,7 @@ footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;let
 <header class="nav"><div class="wrap">
   <div class="logo"><div class="mark">森</div><div>森玥眼镜<small>SENYUE OPTICAL</small></div></div>
   <nav class="menu">
-    <a href="#prod">产品中心</a><a href="#srv">服务项目</a><a href="#about">关于我们</a><a href="#contact">联系我们</a>
+    <a href="#prod">产品中心</a><a href="#srv">服务项目</a><a href="#booking">预约验光</a><a href="#about">关于我们</a><a href="#contact">联系我们</a>
   </nav>
 </div></header>
 
@@ -153,7 +174,8 @@ footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;let
     <h1>森玥眼镜<br>用心呵护您的每一双眼睛</h1>
     <p class="sub">专业验光师一对一精准验光，精选品牌镜架镜片，支持个性化品牌定制——为您配一副舒适、清晰、称心的眼镜。</p>
     <div class="btns">
-      <a href="#prod" class="btn btn-primary">浏览产品 →</a>
+      <a href="#booking" class="btn btn-primary">📞 电话预约</a>
+      <a href="#prod" class="btn btn-ghost">浏览产品</a>
       <a href="https://uri.amap.com/search?keyword=江苏省泰州市靖江市公所桥16号" target="_blank" rel="noopener" class="btn btn-ghost">🧭 导航到店</a>
     </div>
   </div>
@@ -209,6 +231,31 @@ footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;let
     <p>无论是日常近视镜、防蓝光镜片，还是太阳镜、隐形眼镜，森玥眼镜都能为您提供合适的方案。</p>
   </div>
   <div class="pic"><img src="images/exam.jpg" alt="专业验光服务"/></div>
+</div></section>
+
+
+<!-- 预约验光 -->
+<section id="booking" class="booking"><div class="wrap">
+  <div class="booking-card">
+    <div class="bk-left">
+      <div class="tag">预约验光</div>
+      <h2>提前预约，到店免等候</h2>
+      <p>专业验光师一对一服务，欢迎提前电话预约，节省您到店等待的时间。</p>
+      <div class="bk-badges">
+        <span>电话预约</span><span>微信同号</span><span>专业验光</span>
+      </div>
+    </div>
+    <div class="bk-right">
+      <div class="bk-label">预约热线 / 微信同号</div>
+      <a class="bk-phone" href="tel:13382466868">133 8246 6868</a>
+      <div class="bk-person">顾紫玄</div>
+      <div class="bk-btns">
+        <a class="btn btn-primary" href="tel:13382466868">📞 立即电话预约</a>
+        <a class="btn btn-ghost-dark" href="#contact">查看门店信息</a>
+      </div>
+      <div class="bk-note">微信搜索同号 13382466868 添加，可留言预约</div>
+    </div>
+  </div>
 </div></section>
 
 <!-- 联系我们 -->
