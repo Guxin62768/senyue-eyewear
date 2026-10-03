@@ -150,6 +150,25 @@ footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;let
 .btn-ghost-dark:hover{background:rgba(255,255,255,.22)}
 .bk-note{font-size:.82rem;color:#b8d8d4}
 @media(max-width:760px){.booking-card{grid-template-columns:1fr;gap:28px;padding:28px}}
+
+/* 客户好评 */
+.reviews{background:#fff}
+.rv-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.rv{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:30px 28px;box-shadow:var(--shadow);position:relative;transition:.28s}
+.rv:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.rv::before{content:"\201C";position:absolute;top:8px;right:22px;font-size:3.4rem;color:var(--teal-l);font-family:Georgia,serif;line-height:1}
+.rv-stars{color:var(--accent);font-size:1.05rem;letter-spacing:2px;margin-bottom:12px}
+.rv p{color:#46596a;font-size:.95rem;line-height:1.85;margin-bottom:14px}
+.rv-name{color:var(--teal-d);font-weight:700;font-size:.9rem}
+/* 护眼小知识 */
+.tips{background:var(--teal-l)}
+.tip-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.tip{background:#fff;border-radius:16px;padding:28px 26px;box-shadow:var(--shadow);transition:.28s}
+.tip:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.tip-ic{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:44px;padding:0 12px;
+  border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;font-weight:800;font-size:.9rem;margin-bottom:14px}
+.tip h3{color:var(--teal-d);font-size:1.04rem;margin-bottom:8px}
+.tip p{color:var(--muted);font-size:.9rem;line-height:1.8}
 </style></head><body>
 
 <!-- 顶栏 -->
@@ -234,6 +253,21 @@ footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;let
 </div></section>
 
 
+
+<!-- 客户好评 -->
+<section class="reviews"><div class="wrap">
+  <div class="sec-head">
+    <div class="tag">客户好评</div>
+    <h2>用心服务，口碑见证</h2>
+    <p class="sub">感谢每一位顾客的信任</p>
+  </div>
+  <div class="rv-grid">
+    <div class="rv"><div class="rv-stars">★★★★★</div><p>"验光很仔细，配的眼镜戴着舒服，服务态度也好，推荐！"</p><div class="rv-name">— 李女士</div></div>
+    <div class="rv"><div class="rv-stars">★★★★★</div><p>"款式多，价格实在，老板很专业，给我推荐了合适的镜片。"</p><div class="rv-name">— 王先生</div></div>
+    <div class="rv"><div class="rv-stars">★★★★★</div><p>"孩子的第一副眼镜在这里配的，验光师很有耐心，放心。"</p><div class="rv-name">— 张妈妈</div></div>
+  </div>
+</div></section>
+
 <!-- 预约验光 -->
 <section id="booking" class="booking"><div class="wrap">
   <div class="booking-card">
@@ -255,6 +289,24 @@ footer .brand{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:8px;let
       </div>
       <div class="bk-note">微信搜索同号 13382466868 添加，可留言预约</div>
     </div>
+  </div>
+</div></section>
+
+
+<!-- 护眼小知识 -->
+<section id="tips" class="tips"><div class="wrap">
+  <div class="sec-head">
+    <div class="tag">护眼小知识</div>
+    <h2>日常护眼，从点滴做起</h2>
+    <p class="sub">保护视力，养成良好用眼习惯</p>
+  </div>
+  <div class="tip-grid">
+    <div class="tip"><div class="tip-ic">20-20-20</div><h3>定时放松眼睛</h3><p>每用眼 20 分钟，看向 20 英尺（约 6 米）外 20 秒，缓解视疲劳。</p></div>
+    <div class="tip"><div class="tip-ic">☀</div><h3>充足光线阅读</h3><p>避免在昏暗或晃动的环境中看书、看手机，光线要柔和均匀。</p></div>
+    <div class="tip"><div class="tip-ic">📱</div><h3>控制电子屏幕</h3><p>减少长时间盯屏幕，适当调低亮度，开启护眼模式。</p></div>
+    <div class="tip"><div class="tip-ic">🥕</div><h3>均衡饮食</h3><p>多吃富含维生素 A、叶黄素的食物，如胡萝卜、菠菜、蓝莓。</p></div>
+    <div class="tip"><div class="tip-ic">🕶</div><h3>户外戴太阳镜</h3><p>强光下佩戴防紫外线太阳镜，保护眼睛免受紫外线伤害。</p></div>
+    <div class="tip"><div class="tip-ic">👁</div><h3>定期检查视力</h3><p>建议每年做一次视力/验光检查，及时发现问题，科学配镜。</p></div>
   </div>
 </div></section>
 
